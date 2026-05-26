@@ -33,3 +33,4 @@ public class Ex05PreOrdem {
        System.out.println(resultado);
    }
 }
+// yara
