@@ -1,50 +1,37 @@
-package ExerciciosMaioADO;
-
-class Node {
-    int valor;
-    Node Direita;
-    Node Esquerda;
-
-    public Node(int valor) {
-        this.valor = valor;
-        this.Esquerda = null;
-        this.Direita = null;
+public class Ex01AlturaDaArvore {
+    static class No {
+        String nome;
+        No left;
+        No right;
+        No(String nome){
+            this.nome = nome;
+        }
     }
-}
-
-class ArvoreBinaria {
-    Node raiz;
-
-    public int altura(Node raiz) {
-        if (raiz == null) {
+    public static int altura(No raiz){
+        if (raiz == null){
             return 0;
         }
-
-        int alturaEsquerda = altura(raiz.Esquerda);
-
-        int alturaDireita = altura(raiz.Direita);
-
+        int alturaEsquerda = altura(raiz.left);
+        int alturaDireita = altura(raiz.right);
         int maiorAltura = Math.max(alturaEsquerda, alturaDireita);
-
         return 1 + maiorAltura;
+        //return 1 + Math.max(alturaEsquerda, alturaDireita);
     }
-}
-
-public class ExUm {
-    public static void main(String[] args) {
-        ArvoreBinaria arvore = new ArvoreBinaria();
-
-        System.out.println("Teste 1: Árvore Vazia");
-        System.out.println("Altura da árvore vazia: " + arvore.altura(arvore.raiz)); 
-
-        System.out.println();
-
-        System.out.println("Teste 2: Árvore Pequena");
-
-        arvore.raiz = new Node(10);
-        arvore.raiz.Esquerda = new Node(5);
-        arvore.raiz.Direita = new Node(15);
-
-        System.out.println("Altura da árvore pequena: " + arvore.altura(arvore.raiz)); 
+    public static No pastasEmpresa(){
+        No raiz = new No("root");
+        raiz.left = new No("home");
+        raiz.right = new No("user");
+        raiz.left.left = new No("documents");
+        raiz.right.right = new No("downloads");
+        return raiz;
+ 
     }
-}
+     public static void main(String[] args) {
+        No raiz = pastasEmpresa();
+        //arvore pequena
+        System.out.println("Altura da arvore: " + altura(raiz));
+        //arvore vazia
+        System.out.println("Altura arvore vazia: " + altura(null));
+    }  
+ }
+ 

@@ -42,9 +42,9 @@ static class No {
        raiz.direita = new No(20);
        raiz.esquerda.esquerda = new No(3);
        raiz.esquerda.direita = new No(7);
-       System.out.println("Altura do nó 10: " + alturaDoNo(raiz, 10));
-       System.out.println("Altura do nó 5: " + alturaDoNo(raiz, 5));
-       System.out.println("Altura do nó 3: " + alturaDoNo(raiz, 3));
-       System.out.println("Altura do nó 99: " + alturaDoNo(raiz, 99));
+       System.out.println("Altura do no 10: " + alturaDoNo(raiz, 10));
+       System.out.println("Altura do no 5: " + alturaDoNo(raiz, 5));
+       System.out.println("Altura do no 3: " + alturaDoNo(raiz, 3));
+       System.out.println("Altura do no 99: " + alturaDoNo(raiz, 99));
    }
 }
