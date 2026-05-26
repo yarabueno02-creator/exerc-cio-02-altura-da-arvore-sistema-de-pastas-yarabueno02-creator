@@ -1,6 +1,4 @@
-package ExerciciosMaioADO;
-
-public class ExQuatro {
+public class Ex04BuscaEmABB {
 static class No {
        int codigo;
        No left;

@@ -1,6 +1,4 @@
-package ExerciciosMaioADO;
-
-public class ExTres {
+public class Ex03AlturaDeUmNo {
 static class No {
        int valor;
        No esquerda;

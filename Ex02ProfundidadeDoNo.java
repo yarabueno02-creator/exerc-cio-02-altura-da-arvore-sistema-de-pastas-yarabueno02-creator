@@ -1,6 +1,4 @@
-package ExerciciosMaioADO;
-
-public class ExDois {
+public class Ex02ProfundidadeDoNo {
    static class Node {
        int id;
        Node left;
